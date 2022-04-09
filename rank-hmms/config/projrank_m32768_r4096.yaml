@@ -1,0 +1,55 @@
+device: 1
+save_dir: 'log'
+nni: false
+wandb: true
+wandb_mode: dryrun  # online, dryrun, disabled
+wandb_log: ./
+init: xavier_normal  # xaiver_(uniform/normal), kaiming
+special_weights: emb
+bsz_fn: tokens # tokens, sentences
+iterator: bucket  # bucket, bptt(not implemented yet)
+debug: false  # 10% training data for tuning/debugging
+timing: false
+seed: 1111
+
+
+data:
+  dataset: ptb  # ptb, wsj
+  
+train:
+  train_bsz: 256  # acutally max tokens number
+  max_epochs: 50
+  patience: 8
+  clip: 5
+  
+  
+eval:
+  eval_bsz: 256   # acutally max tokens number
+
+
+model:
+  model_name: 'projrankspace'
+  num_classes: 32768
+  rank: 4096
+  hidden_dim: 256
+  dropout: 0.1
+  word_dropout: 0.0
+  states_dropout: 0.0
+  rank_dropout: 0.0
+  tw: ""
+  transmlp: false
+  
+optimizer:
+  name: 'adamw'
+  lr: 0.001
+  beta1: 0.9
+  beta2: 0.999
+  weight_decay: 0.000
+
+scheduler:
+  name: reducelronplateau
+  patience: 2
+  decay: 2
+
+
+  
