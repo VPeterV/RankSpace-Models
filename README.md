@@ -1,8 +1,8 @@
 # RankSpace-Models
 This repository contains source code for NAACL2022 main conference [Dynamic Programming in Rank Space: Scaling Structured Inference with Low-Rank HMMs and PCFGs](https://faculty.sist.shanghaitech.edu.cn/faculty/tukw/naacl22rank.pdf)
 
-* Code for scaling low structured inference with HMMs in rank-hmms.
-* Code for scaling low structured inference with PCFGs in rank-pcfgs, which has been merged into [TN-PCFG](https://github.com/sustcsonglin/TN-PCFG). More details can be seen in it.
+* Code for scaling low-rank structured inference with HMMs in rank-hmms.
+* Code for scaling low-rank structured inference with PCFGs in rank-pcfgs, which has been merged into [TN-PCFG](https://github.com/sustcsonglin/TN-PCFG). More details can be seen in it.
 
 ## Dependencies
 ```
